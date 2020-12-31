@@ -22,8 +22,7 @@ namespace SalesWebMvc.Services
 
         public void Insert(Seller obj)
         {
-            obj.Department = _context.Department.First();
-            obj.Id = _context.Seller.Last().Id + 1;
+            obj.Id = _context.Seller.Last().Id + 1; // gambiarra, tem que arrumar!
             _context.Add(obj);
             _context.SaveChanges();
         }
